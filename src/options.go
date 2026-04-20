@@ -56,7 +56,7 @@ type Options struct {
 // DefaultOptions returns Options populated with sensible defaults
 func DefaultOptions() *Options {
 	return &Options{
-		Prompt:        "$ ", // personal preference: use $ instead of > to match my shell prompt
+		Prompt:        "❯ ", // use a right-pointing chevron for a modern look
 		Pointer:       "▶", // use a filled triangle for a cleaner look
 		Marker:        "✓", // use a checkmark to clearly indicate selected items
 		Algorithm:     "v2",
@@ -123,7 +123,4 @@ func parseArgs(opts *Options, args []string) error {
 			opts.Query = args[i]
 		case strings.HasPrefix(arg, "--prompt="):
 			opts.Prompt = strings.TrimPrefix(arg, "--prompt=")
-		case strings.HasPrefix(arg, "--preview="):
-			opts.Preview = strings.TrimPrefix(arg, "--preview=")
-		case strings.HasPrefix(arg, "--height="):
-			opts.Height = strings.TrimPrefix
+		case strings
