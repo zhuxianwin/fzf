@@ -56,9 +56,9 @@ type Options struct {
 // DefaultOptions returns Options populated with sensible defaults
 func DefaultOptions() *Options {
 	return &Options{
-		Prompt:        "❯ ", // use a right-pointing chevron for a modern look
-		Pointer:       "▶", // use a filled triangle for a cleaner look
-		Marker:        "✓", // use a checkmark to clearly indicate selected items
+		Prompt:        "> ", // prefer a simple ASCII prompt over the unicode chevron
+		Pointer:       ">", // simple ASCII pointer for better terminal compatibility
+		Marker:        "*", // use an asterisk; universally supported in all terminals
 		Algorithm:     "v2",
 		MinHeight:     10,
 		Border:        "none",
