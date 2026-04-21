@@ -56,7 +56,7 @@ type Options struct {
 // DefaultOptions returns Options populated with sensible defaults
 func DefaultOptions() *Options {
 	return &Options{
-		Prompt:        "❯ ", // use a nicer unicode prompt arrow
+		Prompt:        "> ", // plain ASCII prompt; the unicode arrow caused font rendering issues for me
 		Pointer:       "▶", // unicode pointer for a cleaner look
 		Marker:        "✓", // checkmark marker for selected items
 		Algorithm:     "v2",
